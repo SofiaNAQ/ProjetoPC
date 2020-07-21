@@ -153,13 +153,13 @@ def principalCLI():
 def saldo():
     transf.query()
 
-    print("\nPara imprimir digite 1")
-    print("Para finalizar a consulta digite 2")
-    escolha = input("Digite o número: ")
+    print("\nPara imprimir digite -1-")
+    print("Para finalizar a consulta digite -2-")
+    numero = input("Digite o número: ")
     print()
 
-    while(escolha != "1" and escolha != "2"):
-        print("Digite corretamente...")
+    while(numero != "1" and numero != "2"):
+        print("Digite os números apresentados..")
         escolha = input("Digite o número: ")
         print()
 
@@ -171,15 +171,15 @@ def saldo():
 def trans():
     transf.transference()
 
-    t = input("\nConfirmar a transação (Digite 1 para SIM ou 2 para NÃO)\n")
-    while(t != "1" and t != "2"):
-        t = input("\nConfirmar transação (Digite 1 para SIM ou 2 para NÃO)\n")
+    ks = input("\nConfirmar a transação (Digite -1- para SIM ou -2- para NÃO)\n")
+    while(ks != "1" and ks != "2"):
+        ks = input("\nConfirmar transação (Digite -1- para SIM ou -2- para NÃO)\n")
 
-    if(t == "1"):
-        print("Transferência Concluída")
+    if(ks == "1"):
+        print("Transferência Completa")
         time.sleep(2)
     else:
-        print("Voltando para o menu...")
+        print("Retornando para o menu...")
         time.sleep(2)
 
 
@@ -187,32 +187,33 @@ def extrato():
     print("\n Histórico das operações\n")
     transf.statement()
 
-    input("\nPressione enter para voltar para o menu")
+    input("\nPara voltar ao menu pressione enter")
 
 
 def principalMOV():
     while True:
         time.sleep(2)
         os.system("cls")
-        print("===Banco Digital===")
+        print("-----------------------------------------")
+        print("\-\ Banco Digital /-/")
         print("1 - Consulte seu saldo")
         print("2 - Realize uma transferência")
         print("3 - Consulte seu extrato")
         print("4 - Sair do sistema Banco")
-        opcao = int(input("Digite o opção desejada:"))
+        escolhe = int(input("Digite o opção desejada:"))
+        print("-----------------------------------------")
 
-
-        if opcao == 1:
+        if escolhe == 1:
             saldo()
-        elif opcao == 2:
+        elif escolhe == 2:
             trans()
-        elif opcao == 3:
+        elif escolhe == 3:
             extrato()
-        elif opcao == 4:
-            print("Saindo do programa...")
+        elif escolhe == 4:
+            print("Fechando o programa...")
             break
         else:
-            print("Opcão incorreta, por favor digite novamente...")
+            print("Opcão invalida, por favor tente novamente.")
 
 # --------------------------------------------- Funcionamento -------------------------------------------------
 def principal():
