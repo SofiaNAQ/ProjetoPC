@@ -26,7 +26,7 @@ class Transactions:
                 "INSERT INTO users(id, saldo, extrato, created_at, updated_at) VALUES(%s, %s, %s,%s,%s)", values)
             mydb.commit()
         except ConnectionError:
-            print('Não foi possível cadastrar um novo usuário...     ')
+            print('Não foi possível cadastrar um novo usuário.     ')
 
         return 'Created', 201
 
@@ -42,7 +42,7 @@ class Transactions:
         data_atual = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
 
         destino = int(
-            input("Digite o número da conta que deseja depositar...    "))
+            input("Digite o número da conta que deseja depositar:    "))
 
         if self.id == destino:
             print("Operação não permitida!")
@@ -69,14 +69,14 @@ class Transactions:
             saldo_destino = i[1]
 
         if self.id != id_origem or destino != id_destino:
-            print("Conta informada não existente...     ")
+            print("Conta informada não existente.     ")
             exit()
 
         valor_retirada = float(
             input("Qual será o valor da transferência?       "))
 
         if saldo_origem - valor_retirada < 0:
-            print("Saldo insuficiente...        ")
+            print("Saldo insuficiente.        ")
         else:
             try:
                 transfere = saldo_origem - valor_retirada
@@ -116,6 +116,6 @@ class Transactions:
                 print("--------------------------------\n")
 
         except ConnectionError:
-            print("Não foi possível realizar a operação...      ")
+            print("Não foi possível realizar a operação!      ")
 
         return 200
