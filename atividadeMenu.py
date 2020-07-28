@@ -150,6 +150,9 @@ def principalCLI():
 
 # ------------------------------------- Área de Movimentação ------------------------------------------------
 
+
+
+
 def saldo():
     transf.query()
 
@@ -195,6 +198,7 @@ def principalMOV():
         time.sleep(2)
         os.system("cls")
         print("-----------------------------------------")
+        print(" === MÓDULO MOVIMENTAÇÃO === ")
         print("\-\ Banco Digital /-/")
         print("1 - Consulte seu saldo")
         print("2 - Realize uma transferência")
