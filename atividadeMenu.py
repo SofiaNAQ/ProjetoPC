@@ -200,19 +200,19 @@ def principalMOV():
         print("-----------------------------------------")
         print(" === MÓDULO MOVIMENTAÇÃO === ")
         print("\-\ Banco Digital /-/")
-        print("1 - Consulte seu saldo")
+        print("1 - Consulte seu extrato")
         print("2 - Realize uma transferência")
-        print("3 - Consulte seu extrato")
-        print("4 - Sair do sistema Banco")
+        print("3 - Consulte seu saldo")
+        print("4 - Sair do Banco")
         escolhe = int(input("Digite o opção desejada:"))
         print("-----------------------------------------")
 
         if escolhe == 1:
-            saldo()
+            extrato()
         elif escolhe == 2:
             trans()
         elif escolhe == 3:
-            extrato()
+            saldo()
         elif escolhe == 4:
             print("Fechando o programa...")
             break
