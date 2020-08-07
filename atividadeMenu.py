@@ -1,10 +1,10 @@
 import os
 import time
-from transactions import Transactions
+from transacoes import Transacoes
 import functions as fun
 from datetime import date
 
-transf = Transactions(1)
+transf = Transacoes(1)
 func = fun.functionsADM()
 gatilho = 0
 # ------------------------------------- Área de administração ------------------------------------------------
